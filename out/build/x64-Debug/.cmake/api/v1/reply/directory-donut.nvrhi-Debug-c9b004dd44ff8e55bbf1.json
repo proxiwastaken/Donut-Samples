@@ -1,0 +1,148 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"donut/nvrhi/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 342,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 345,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 353,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 357,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 361,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "D:/abertay coursework/donut/Donut-Samples/out/install/x64-Debug/include",
+			"paths" : 
+			[
+				"donut/nvrhi/include/nvrhi"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"donut/nvrhi/nvrhi.lib"
+			],
+			"targetId" : "nvrhi::@8b1245c28ff8172fffc8",
+			"targetIndex" : 50,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"donut/nvrhi/nvrhi_d3d11.lib"
+			],
+			"targetId" : "nvrhi_d3d11::@8b1245c28ff8172fffc8",
+			"targetIndex" : 51,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "nvrhi_d3d11::@8b1245c28ff8172fffc8",
+				"index" : 51
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"donut/nvrhi/nvrhi_d3d12.lib"
+			],
+			"targetId" : "nvrhi_d3d12::@8b1245c28ff8172fffc8",
+			"targetIndex" : 52,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "nvrhi_d3d12::@8b1245c28ff8172fffc8",
+				"index" : 52
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"donut/nvrhi/nvrhi_vk.lib"
+			],
+			"targetId" : "nvrhi_vk::@8b1245c28ff8172fffc8",
+			"targetIndex" : 53,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "nvrhi_vk::@8b1245c28ff8172fffc8",
+				"index" : 53
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "donut/nvrhi",
+		"source" : "donut/nvrhi"
+	}
+}

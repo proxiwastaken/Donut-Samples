@@ -1,0 +1,3 @@
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/CMakeFiles/dxc-populate.dir
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/CMakeFiles/edit_cache.dir
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/CMakeFiles/rebuild_cache.dir

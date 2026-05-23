@@ -1,0 +1,14 @@
+# Target labels
+ dxc-populate
+# Source files and their labels
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/CMakeFiles/dxc-populate
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/CMakeFiles/dxc-populate.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/CMakeFiles/dxc-populate-complete.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-build.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-configure.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-download.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-install.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-mkdir.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-patch.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-test.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-update.rule

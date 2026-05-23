@@ -1,0 +1,21 @@
+# ninja log v6
+6	104	8012707850569396	dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-mkdir	bdf864653356b762
+6	104	8012707850569396	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-mkdir	bdf864653356b762
+105	1975	8012707869327097	dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-download	6fb6fcbbd5ac1d93
+105	1975	8012707869327097	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-download	6fb6fcbbd5ac1d93
+1976	2046	8012707870022877	dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-update	1543f1ad34156811
+1976	2046	8012707870022877	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-update	1543f1ad34156811
+2046	2114	8012707870703521	dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-patch	d7587de15c92fc78
+2046	2114	8012707870703521	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-patch	d7587de15c92fc78
+2114	2181	8012707871379172	dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-configure	7bfe283b0a37e56c
+2114	2181	8012707871379172	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-configure	7bfe283b0a37e56c
+2182	2250	8012707872066605	dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-build	2006bbe3a07d779b
+2182	2250	8012707872066605	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-build	2006bbe3a07d779b
+2251	2316	8012707872733806	dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-install	b71202cf5154e931
+2251	2316	8012707872733806	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-install	b71202cf5154e931
+2317	2381	8012707873384403	dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-test	cbaf6933bb261be
+2317	2381	8012707873384403	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-test	cbaf6933bb261be
+2381	2470	8012707874280250	CMakeFiles/dxc-populate-complete	2229c535604530ae
+2381	2470	8012707874280250	dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-done	2229c535604530ae
+2381	2470	8012707874280250	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/CMakeFiles/dxc-populate-complete	2229c535604530ae
+2381	2470	8012707874280250	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-done	2229c535604530ae

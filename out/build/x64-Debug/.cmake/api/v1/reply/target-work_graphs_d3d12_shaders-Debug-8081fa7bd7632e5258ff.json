@@ -1,0 +1,122 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"donut_compile_shaders",
+			"add_custom_command"
+		],
+		"files" : 
+		[
+			"donut/compileshaders.cmake",
+			"examples/work_graphs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 29,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 114,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 180,
+				"parent" : 1
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "ShaderMake::@cdbbb3c32f0f5314efaa"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "Examples/Work Graphs"
+	},
+	"id" : "work_graphs_d3d12_shaders::@1f55de780f62a714450f",
+	"name" : "work_graphs_d3d12_shaders",
+	"paths" : 
+	{
+		"build" : "examples/work_graphs",
+		"source" : "examples/work_graphs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				6
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"path" : "examples/work_graphs/animation.hlsl",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "examples/work_graphs/deferred_shading.hlsl",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "examples/work_graphs/gbuffer_fill.hlsl",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "examples/work_graphs/light_culling.hlsl",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "examples/work_graphs/work_graph_broadcasting.hlsl",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/examples/work_graphs/CMakeFiles/work_graphs_d3d12_shaders",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/examples/work_graphs/CMakeFiles/work_graphs_d3d12_shaders.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

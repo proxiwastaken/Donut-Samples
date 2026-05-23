@@ -1,0 +1,3 @@
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/CMakeFiles/d3d_agility_sdk-populate.dir
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/CMakeFiles/edit_cache.dir
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/CMakeFiles/rebuild_cache.dir

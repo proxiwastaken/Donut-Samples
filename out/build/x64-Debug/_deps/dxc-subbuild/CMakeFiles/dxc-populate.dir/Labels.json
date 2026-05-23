@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/CMakeFiles/dxc-populate"
+		},
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/CMakeFiles/dxc-populate.rule"
+		},
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/CMakeFiles/dxc-populate-complete.rule"
+		},
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-build.rule"
+		},
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-configure.rule"
+		},
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-download.rule"
+		},
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-install.rule"
+		},
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-patch.rule"
+		},
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-test.rule"
+		},
+		{
+			"file" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/dxc-subbuild/dxc-populate-prefix/src/dxc-populate-stamp/dxc-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"dxc-populate"
+		],
+		"name" : "dxc-populate"
+	}
+}

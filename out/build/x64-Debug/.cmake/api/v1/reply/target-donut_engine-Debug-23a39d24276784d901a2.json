@@ -1,0 +1,665 @@
+{
+	"archive" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/machine:x64",
+				"role" : "flags"
+			}
+		]
+	},
+	"artifacts" : 
+	[
+		{
+			"path" : "donut/donut_engine.lib"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"target_link_libraries",
+			"add_dependencies",
+			"target_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"donut/donut-engine.cmake",
+			"donut/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 125,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 39,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 61,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 57,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 58,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 52,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 59,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 42,
+				"parent" : 2
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 51,
+				"parent" : 2
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /W3 /MP /Zi /Ob0 /Od /RTC1 -D_DEBUG -std:c++17 -MTd"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "DONUT_WITH_AFTERMATH=0"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "DONUT_WITH_DX11=1"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "DONUT_WITH_DX12=1"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "DONUT_WITH_STATIC_SHADERS=0"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "DONUT_WITH_TINYEXR"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "DONUT_WITH_VULKAN=1"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "NOMINMAX"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 13,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/thirdparty/jsoncpp-amalgam"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/nvrhi/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/thirdparty/stb"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/thirdparty/cgltf"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/ShaderMake"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/thirdparty/tinyexr"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					3
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MTd"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "DONUT_WITH_AFTERMATH=0"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "DONUT_WITH_DX11=1"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "DONUT_WITH_DX12=1"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "DONUT_WITH_STATIC_SHADERS=0"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "DONUT_WITH_TINYEXR"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "DONUT_WITH_VULKAN=1"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "NOMINMAX"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 13,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/thirdparty/jsoncpp-amalgam"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/nvrhi/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/thirdparty/stb"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/thirdparty/cgltf"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/ShaderMake"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "D:/abertay coursework/donut/Donut-Samples/donut/thirdparty/tinyexr"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				43
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "jsoncpp_static::@090198c1f7c8d3d2b473"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "donut_core::@fd251c01b49271d0d6e3"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "ShaderMakeBlob::@3b15f9f1074dea787ab8"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "nvrhi::@8b1245c28ff8172fffc8"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "donut_shaders::@d00c6fab64731cfaa6d7"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "Donut"
+	},
+	"id" : "donut_engine::@fd251c01b49271d0d6e3",
+	"name" : "donut_engine",
+	"nameOnDisk" : "donut_engine.lib",
+	"paths" : 
+	{
+		"build" : "donut",
+		"source" : "donut"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				42
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				43
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				44
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/AudioCache.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/AudioEngine.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/BindingCache.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/CommonRenderPasses.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/ConsoleInterpreter.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/ConsoleObjects.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/DDSFile.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/DescriptorTableManager.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/FramebufferFactory.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/GltfImporter.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/IesProfile.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/KeyframeAnimation.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/MaterialBindingCache.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/Scene.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/SceneGraph.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/SceneTypes.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/ShaderFactory.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/ShadowMap.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/TextureCache.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/ThreadPool.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/include/donut/engine/View.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/AudioCache.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/AudioEngine.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/BindingCache.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/CommonRenderPasses.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/ConsoleInterpreter.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/ConsoleObjects.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/DDSFile.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/DescriptorTableManager.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/FramebufferFactory.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/GltfImporter.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/IesProfile.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/KeyframeAnimation.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/Material.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/MaterialBindingCache.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/Scene.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/SceneGraph.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/SceneTypes.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/ShaderFactory.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/TextureCache.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/ThreadPool.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "donut/src/engine/View.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/src/engine/dds.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 1,
+			"path" : "donut/src/engine/stb_impl.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "donut/donut.natvis",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

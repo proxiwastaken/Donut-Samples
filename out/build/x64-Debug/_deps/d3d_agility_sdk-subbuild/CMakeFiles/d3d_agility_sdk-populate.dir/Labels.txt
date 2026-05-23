@@ -1,0 +1,14 @@
+# Target labels
+ d3d_agility_sdk-populate
+# Source files and their labels
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/CMakeFiles/d3d_agility_sdk-populate
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/CMakeFiles/d3d_agility_sdk-populate.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/CMakeFiles/d3d_agility_sdk-populate-complete.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-build.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-configure.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-download.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-install.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-mkdir.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-patch.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-test.rule
+D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-update.rule

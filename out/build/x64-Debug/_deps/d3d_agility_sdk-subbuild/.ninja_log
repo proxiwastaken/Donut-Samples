@@ -1,0 +1,21 @@
+# ninja log v6
+7	79	8012707882365432	d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-mkdir	b3894940260bf0d9
+7	79	8012707882365432	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-mkdir	b3894940260bf0d9
+79	1925	8012707900832979	d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-download	d8421b732ba3fbc7
+79	1925	8012707900832979	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-download	d8421b732ba3fbc7
+1925	1990	8012707901483571	d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-update	c26015967c9d8bc2
+1925	1990	8012707901483571	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-update	c26015967c9d8bc2
+1990	2054	8012707902119181	d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-patch	f4321d23fb0935e8
+1990	2054	8012707902119181	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-patch	f4321d23fb0935e8
+2054	2118	8012707902765041	d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-configure	ad901308cb8b306b
+2054	2118	8012707902765041	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-configure	ad901308cb8b306b
+2118	2183	8012707903415631	d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-build	4e2461ee15379008
+2118	2183	8012707903415631	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-build	4e2461ee15379008
+2183	2250	8012707904091296	d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-install	54fbedd42cca2353
+2183	2250	8012707904091296	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-install	54fbedd42cca2353
+2251	2317	8012707904756944	d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-test	fe6ff0b41cec51b4
+2251	2317	8012707904756944	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-test	fe6ff0b41cec51b4
+2318	2406	8012707905637771	CMakeFiles/d3d_agility_sdk-populate-complete	955a09951a52cc91
+2318	2406	8012707905637771	d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-done	955a09951a52cc91
+2318	2406	8012707905637771	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/CMakeFiles/d3d_agility_sdk-populate-complete	955a09951a52cc91
+2318	2406	8012707905637771	D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug/_deps/d3d_agility_sdk-subbuild/d3d_agility_sdk-populate-prefix/src/d3d_agility_sdk-populate-stamp/d3d_agility_sdk-populate-done	955a09951a52cc91

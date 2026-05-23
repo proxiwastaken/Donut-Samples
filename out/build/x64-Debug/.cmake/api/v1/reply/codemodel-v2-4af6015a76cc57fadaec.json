@@ -1,0 +1,1231 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "donut",
+					"childIndexes" : 
+					[
+						2,
+						5,
+						7,
+						10
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-donut-Debug-296f77c728a8cf3c93e0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "donut",
+					"targetIndexes" : 
+					[
+						37,
+						38,
+						39,
+						40
+					]
+				},
+				{
+					"build" : "donut/thirdparty",
+					"childIndexes" : 
+					[
+						3
+					],
+					"jsonFile" : "directory-donut.thirdparty-Debug-92771827815e63154eb5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "donut/thirdparty",
+					"targetIndexes" : 
+					[
+						46,
+						47
+					]
+				},
+				{
+					"build" : "donut/thirdparty/glfw",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-donut.thirdparty.glfw-Debug-e580ee40bc398ad69d97.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "donut/thirdparty/glfw"
+				},
+				{
+					"build" : "donut/thirdparty/glfw/src",
+					"jsonFile" : "directory-donut.thirdparty.glfw.src-Debug-00925f984a9f60c4c082.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "donut/thirdparty/glfw/src",
+					"targetIndexes" : 
+					[
+						43,
+						67
+					]
+				},
+				{
+					"build" : "donut/ShaderMake",
+					"childIndexes" : 
+					[
+						6
+					],
+					"jsonFile" : "directory-donut.ShaderMake-Debug-0bc17cbc03e0f82db056.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "donut/ShaderMake",
+					"targetIndexes" : 
+					[
+						31
+					]
+				},
+				{
+					"build" : "donut/ShaderMake/ShaderMake",
+					"jsonFile" : "directory-donut.ShaderMake.ShaderMake-Debug-24351bdd60685061fef5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 4,
+					"source" : "donut/ShaderMake/ShaderMake",
+					"targetIndexes" : 
+					[
+						30
+					]
+				},
+				{
+					"build" : "donut/nvrhi",
+					"childIndexes" : 
+					[
+						8,
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-donut.nvrhi-Debug-c9b004dd44ff8e55bbf1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 5,
+					"source" : "donut/nvrhi",
+					"targetIndexes" : 
+					[
+						50,
+						51,
+						52,
+						53
+					]
+				},
+				{
+					"build" : "donut/nvrhi/thirdparty/Vulkan-Headers",
+					"jsonFile" : "directory-donut.nvrhi.thirdparty.Vulkan-Headers-Debug-52db63b539b6c6af5cfb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.1"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 6,
+					"source" : "donut/nvrhi/thirdparty/Vulkan-Headers"
+				},
+				{
+					"build" : "donut/nvrhi/thirdparty/DirectX-Headers",
+					"jsonFile" : "directory-donut.nvrhi.thirdparty.DirectX-Headers-Debug-01cd853c1f0f514aa9f4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 7,
+					"source" : "donut/nvrhi/thirdparty/DirectX-Headers",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29
+					]
+				},
+				{
+					"build" : "donut/shaders",
+					"jsonFile" : "directory-donut.shaders-Debug-15e6939d0e0183451be0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "donut/shaders",
+					"targetIndexes" : 
+					[
+						41
+					]
+				},
+				{
+					"build" : "feature_demo",
+					"jsonFile" : "directory-feature_demo-Debug-32a41db37cfd4bc8964e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "feature_demo",
+					"targetIndexes" : 
+					[
+						42
+					]
+				},
+				{
+					"build" : "examples/basic_triangle",
+					"jsonFile" : "directory-examples.basic_triangle-Debug-426d383a0ebaa55dd2d7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/basic_triangle",
+					"targetIndexes" : 
+					[
+						32,
+						33
+					]
+				},
+				{
+					"build" : "examples/vertex_buffer",
+					"jsonFile" : "directory-examples.vertex_buffer-Debug-b791b338370c4cf7780d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/vertex_buffer",
+					"targetIndexes" : 
+					[
+						70,
+						71
+					]
+				},
+				{
+					"build" : "examples/deferred_shading",
+					"jsonFile" : "directory-examples.deferred_shading-Debug-054be2f87d2502a304e6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/deferred_shading",
+					"targetIndexes" : 
+					[
+						36
+					]
+				},
+				{
+					"build" : "examples/headless",
+					"jsonFile" : "directory-examples.headless-Debug-b4a00d8bb8346fe70f64.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/headless",
+					"targetIndexes" : 
+					[
+						44,
+						45
+					]
+				},
+				{
+					"build" : "examples/bindless_rendering",
+					"jsonFile" : "directory-examples.bindless_rendering-Debug-baebf59b21c392842e25.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/bindless_rendering",
+					"targetIndexes" : 
+					[
+						34,
+						35
+					]
+				},
+				{
+					"build" : "examples/variable_shading",
+					"jsonFile" : "directory-examples.variable_shading-Debug-5a91374e4a73f0c06405.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/variable_shading",
+					"targetIndexes" : 
+					[
+						68,
+						69
+					]
+				},
+				{
+					"build" : "examples/rt_triangle",
+					"jsonFile" : "directory-examples.rt_triangle-Debug-9beb909c033e4642d3aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/rt_triangle",
+					"targetIndexes" : 
+					[
+						62,
+						63
+					]
+				},
+				{
+					"build" : "examples/rt_shadows",
+					"jsonFile" : "directory-examples.rt_shadows-Debug-59bf2bf9bf75e03ff0e9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/rt_shadows",
+					"targetIndexes" : 
+					[
+						60,
+						61
+					]
+				},
+				{
+					"build" : "examples/rt_bindless",
+					"jsonFile" : "directory-examples.rt_bindless-Debug-8044ec9ca77fa79efa5c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/rt_bindless",
+					"targetIndexes" : 
+					[
+						54,
+						55
+					]
+				},
+				{
+					"build" : "examples/rt_particles",
+					"jsonFile" : "directory-examples.rt_particles-Debug-89437105c99413e003aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/rt_particles",
+					"targetIndexes" : 
+					[
+						56,
+						57
+					]
+				},
+				{
+					"build" : "examples/meshlets",
+					"jsonFile" : "directory-examples.meshlets-Debug-fc59dc1d8924a7116034.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/meshlets",
+					"targetIndexes" : 
+					[
+						48,
+						49
+					]
+				},
+				{
+					"build" : "examples/threaded_rendering",
+					"jsonFile" : "directory-examples.threaded_rendering-Debug-d3e6b0d32ae5bc00fdc6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/threaded_rendering",
+					"targetIndexes" : 
+					[
+						66
+					]
+				},
+				{
+					"build" : "examples/work_graphs",
+					"jsonFile" : "directory-examples.work_graphs-Debug-3bece1c9836b897c55ce.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/work_graphs",
+					"targetIndexes" : 
+					[
+						72,
+						73
+					]
+				},
+				{
+					"build" : "examples/rt_reflections",
+					"jsonFile" : "directory-examples.rt_reflections-Debug-47505740bce1326f96d1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/rt_reflections",
+					"targetIndexes" : 
+					[
+						58,
+						59
+					]
+				},
+				{
+					"build" : "examples/shader_specializations",
+					"jsonFile" : "directory-examples.shader_specializations-Debug-57456e1a728c22847010.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples/shader_specializations",
+					"targetIndexes" : 
+					[
+						64,
+						65
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26
+					],
+					"name" : "donut_examples",
+					"targetIndexes" : 
+					[
+						32,
+						33,
+						34,
+						35,
+						36,
+						42,
+						44,
+						45,
+						48,
+						49,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						10
+					],
+					"name" : "donut",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						37,
+						38,
+						39,
+						40,
+						41,
+						46,
+						47
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3,
+						4
+					],
+					"name" : "GLFW",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						43,
+						67
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						4
+					],
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "ShaderMakeAll",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						31
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "ShaderMake",
+					"parentIndex" : 3,
+					"targetIndexes" : 
+					[
+						30
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						6,
+						7
+					],
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "nvrhi",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						50,
+						51,
+						52,
+						53
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "VULKAN_HEADERS",
+					"parentIndex" : 5
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "DirectX-Headers",
+					"parentIndex" : 5,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 9,
+					"id" : "Continuous::@460a850a6359b634774d",
+					"jsonFile" : "target-Continuous-Debug-b18958076633716a63e7.json",
+					"name" : "Continuous",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ContinuousBuild::@460a850a6359b634774d",
+					"jsonFile" : "target-ContinuousBuild-Debug-c492584ad831b0982beb.json",
+					"name" : "ContinuousBuild",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ContinuousConfigure::@460a850a6359b634774d",
+					"jsonFile" : "target-ContinuousConfigure-Debug-927756950617f9502589.json",
+					"name" : "ContinuousConfigure",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ContinuousCoverage::@460a850a6359b634774d",
+					"jsonFile" : "target-ContinuousCoverage-Debug-eddc66dc922111aed257.json",
+					"name" : "ContinuousCoverage",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ContinuousMemCheck::@460a850a6359b634774d",
+					"jsonFile" : "target-ContinuousMemCheck-Debug-cf9631c6c704a896bea5.json",
+					"name" : "ContinuousMemCheck",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ContinuousStart::@460a850a6359b634774d",
+					"jsonFile" : "target-ContinuousStart-Debug-c0d25788bb1417383722.json",
+					"name" : "ContinuousStart",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ContinuousSubmit::@460a850a6359b634774d",
+					"jsonFile" : "target-ContinuousSubmit-Debug-44782a2adb5a45ab8f98.json",
+					"name" : "ContinuousSubmit",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ContinuousTest::@460a850a6359b634774d",
+					"jsonFile" : "target-ContinuousTest-Debug-8bb4384f66af30fd8652.json",
+					"name" : "ContinuousTest",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ContinuousUpdate::@460a850a6359b634774d",
+					"jsonFile" : "target-ContinuousUpdate-Debug-b8d9b49256f01bd945ee.json",
+					"name" : "ContinuousUpdate",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DirectX-Guids::@460a850a6359b634774d",
+					"jsonFile" : "target-DirectX-Guids-Debug-a6448ea9ae8a4d46b41e.json",
+					"name" : "DirectX-Guids",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DirectX-Headers::@460a850a6359b634774d",
+					"jsonFile" : "target-DirectX-Headers-Debug-2fdd556698bcfb95fefc.json",
+					"name" : "DirectX-Headers",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "Experimental::@460a850a6359b634774d",
+					"jsonFile" : "target-Experimental-Debug-0ec3f9c5edaeb9900d03.json",
+					"name" : "Experimental",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ExperimentalBuild::@460a850a6359b634774d",
+					"jsonFile" : "target-ExperimentalBuild-Debug-9fc769b41bf684491fd3.json",
+					"name" : "ExperimentalBuild",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ExperimentalConfigure::@460a850a6359b634774d",
+					"jsonFile" : "target-ExperimentalConfigure-Debug-d7ae60a5dc57f8f691f1.json",
+					"name" : "ExperimentalConfigure",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ExperimentalCoverage::@460a850a6359b634774d",
+					"jsonFile" : "target-ExperimentalCoverage-Debug-ac1ee30ceb6559f129e9.json",
+					"name" : "ExperimentalCoverage",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ExperimentalMemCheck::@460a850a6359b634774d",
+					"jsonFile" : "target-ExperimentalMemCheck-Debug-9097d0116758560acff6.json",
+					"name" : "ExperimentalMemCheck",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ExperimentalStart::@460a850a6359b634774d",
+					"jsonFile" : "target-ExperimentalStart-Debug-385017a24bda1c9d9fd1.json",
+					"name" : "ExperimentalStart",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ExperimentalSubmit::@460a850a6359b634774d",
+					"jsonFile" : "target-ExperimentalSubmit-Debug-cce66c707fc37fde62c6.json",
+					"name" : "ExperimentalSubmit",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ExperimentalTest::@460a850a6359b634774d",
+					"jsonFile" : "target-ExperimentalTest-Debug-aefabbd30502233c54bd.json",
+					"name" : "ExperimentalTest",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ExperimentalUpdate::@460a850a6359b634774d",
+					"jsonFile" : "target-ExperimentalUpdate-Debug-0872f715c457a9cdbcb8.json",
+					"name" : "ExperimentalUpdate",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "Nightly::@460a850a6359b634774d",
+					"jsonFile" : "target-Nightly-Debug-4c4b10928b5b565aa9f2.json",
+					"name" : "Nightly",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "NightlyBuild::@460a850a6359b634774d",
+					"jsonFile" : "target-NightlyBuild-Debug-5109522262fa16741e53.json",
+					"name" : "NightlyBuild",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "NightlyConfigure::@460a850a6359b634774d",
+					"jsonFile" : "target-NightlyConfigure-Debug-ab85e3ce4cd6709dd9e0.json",
+					"name" : "NightlyConfigure",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "NightlyCoverage::@460a850a6359b634774d",
+					"jsonFile" : "target-NightlyCoverage-Debug-155feed7a50d72498a9c.json",
+					"name" : "NightlyCoverage",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "NightlyMemCheck::@460a850a6359b634774d",
+					"jsonFile" : "target-NightlyMemCheck-Debug-7ddb0eff69330cb86f19.json",
+					"name" : "NightlyMemCheck",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "NightlyMemoryCheck::@460a850a6359b634774d",
+					"jsonFile" : "target-NightlyMemoryCheck-Debug-c42d76f09f6db2526679.json",
+					"name" : "NightlyMemoryCheck",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "NightlyStart::@460a850a6359b634774d",
+					"jsonFile" : "target-NightlyStart-Debug-d5afc9528a7abc05d72c.json",
+					"name" : "NightlyStart",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "NightlySubmit::@460a850a6359b634774d",
+					"jsonFile" : "target-NightlySubmit-Debug-48f1cc37a6f4c0bc552f.json",
+					"name" : "NightlySubmit",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "NightlyTest::@460a850a6359b634774d",
+					"jsonFile" : "target-NightlyTest-Debug-f4430dab56a2a77c2b8d.json",
+					"name" : "NightlyTest",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "NightlyUpdate::@460a850a6359b634774d",
+					"jsonFile" : "target-NightlyUpdate-Debug-d7aab67a29c0df367928.json",
+					"name" : "NightlyUpdate",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ShaderMake::@cdbbb3c32f0f5314efaa",
+					"jsonFile" : "target-ShaderMake-Debug-a318879a8949ffc44228.json",
+					"name" : "ShaderMake",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ShaderMakeBlob::@3b15f9f1074dea787ab8",
+					"jsonFile" : "target-ShaderMakeBlob-Debug-92de98720af4a1bf6d7e.json",
+					"name" : "ShaderMakeBlob",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "basic_triangle::@43141f84464c8e0191d2",
+					"jsonFile" : "target-basic_triangle-Debug-aab996218f31c3068427.json",
+					"name" : "basic_triangle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "basic_triangle_shaders::@43141f84464c8e0191d2",
+					"jsonFile" : "target-basic_triangle_shaders-Debug-a47a39f4df238a5971a1.json",
+					"name" : "basic_triangle_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "bindless_rendering::@135a21801c0bf156f9d7",
+					"jsonFile" : "target-bindless_rendering-Debug-daa0a621c938aa05ff74.json",
+					"name" : "bindless_rendering",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "bindless_rendering_shaders::@135a21801c0bf156f9d7",
+					"jsonFile" : "target-bindless_rendering_shaders-Debug-7ca794ba38f6214fe7fc.json",
+					"name" : "bindless_rendering_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "deferred_shading::@96af2796acbe19b4ed80",
+					"jsonFile" : "target-deferred_shading-Debug-d3ff4225f554e00ad3ba.json",
+					"name" : "deferred_shading",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "donut_app::@fd251c01b49271d0d6e3",
+					"jsonFile" : "target-donut_app-Debug-e6232e6c71de7d0a5092.json",
+					"name" : "donut_app",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "donut_core::@fd251c01b49271d0d6e3",
+					"jsonFile" : "target-donut_core-Debug-7ff36b1685269c4dff36.json",
+					"name" : "donut_core",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "donut_engine::@fd251c01b49271d0d6e3",
+					"jsonFile" : "target-donut_engine-Debug-23a39d24276784d901a2.json",
+					"name" : "donut_engine",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "donut_render::@fd251c01b49271d0d6e3",
+					"jsonFile" : "target-donut_render-Debug-2d0eec7218ed87eb5908.json",
+					"name" : "donut_render",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "donut_shaders::@d00c6fab64731cfaa6d7",
+					"jsonFile" : "target-donut_shaders-Debug-bbcab0987bb890d3c4c0.json",
+					"name" : "donut_shaders",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "feature_demo::@9d2ea179656340f3ca88",
+					"jsonFile" : "target-feature_demo-Debug-93f4d589601e62d56d61.json",
+					"name" : "feature_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "glfw::@96326d8ef3d4ab9e7c48",
+					"jsonFile" : "target-glfw-Debug-c97fe697ada72d3b5039.json",
+					"name" : "glfw",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "headless::@d4439708917ffb7392ba",
+					"jsonFile" : "target-headless-Debug-4749b2d2c86efe0eac92.json",
+					"name" : "headless",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "headless_shaders::@d4439708917ffb7392ba",
+					"jsonFile" : "target-headless_shaders-Debug-24a26cb6bc7ca3a1b0d9.json",
+					"name" : "headless_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "imgui::@090198c1f7c8d3d2b473",
+					"jsonFile" : "target-imgui-Debug-653b88079e40e89b070e.json",
+					"name" : "imgui",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "jsoncpp_static::@090198c1f7c8d3d2b473",
+					"jsonFile" : "target-jsoncpp_static-Debug-805d2ecdbadac82fef61.json",
+					"name" : "jsoncpp_static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "meshlets::@33bee1220286d2204ba7",
+					"jsonFile" : "target-meshlets-Debug-477ced335909275a6022.json",
+					"name" : "meshlets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "meshlets_shaders::@33bee1220286d2204ba7",
+					"jsonFile" : "target-meshlets_shaders-Debug-42f9b4ffe8a1deb3ad58.json",
+					"name" : "meshlets_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "nvrhi::@8b1245c28ff8172fffc8",
+					"jsonFile" : "target-nvrhi-Debug-cbf2dd3ee37a42a693a9.json",
+					"name" : "nvrhi",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "nvrhi_d3d11::@8b1245c28ff8172fffc8",
+					"jsonFile" : "target-nvrhi_d3d11-Debug-277d644c9d0087a6161e.json",
+					"name" : "nvrhi_d3d11",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "nvrhi_d3d12::@8b1245c28ff8172fffc8",
+					"jsonFile" : "target-nvrhi_d3d12-Debug-68e0cf71332cfcf86875.json",
+					"name" : "nvrhi_d3d12",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "nvrhi_vk::@8b1245c28ff8172fffc8",
+					"jsonFile" : "target-nvrhi_vk-Debug-a55e47e70548097e6b8d.json",
+					"name" : "nvrhi_vk",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "rt_bindless::@e65138556bdf023159d3",
+					"jsonFile" : "target-rt_bindless-Debug-acc6771bfea60b07e6d9.json",
+					"name" : "rt_bindless",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "rt_bindless_shaders::@e65138556bdf023159d3",
+					"jsonFile" : "target-rt_bindless_shaders-Debug-31ce378254f44b36aa55.json",
+					"name" : "rt_bindless_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "rt_particles::@69b1ea8d64cfc4241405",
+					"jsonFile" : "target-rt_particles-Debug-7d4e08ae89cd74136ead.json",
+					"name" : "rt_particles",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "rt_particles_shaders::@69b1ea8d64cfc4241405",
+					"jsonFile" : "target-rt_particles_shaders-Debug-b6cacab0311241e49a8a.json",
+					"name" : "rt_particles_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 25,
+					"id" : "rt_reflections::@2e0e3565467e4e74b279",
+					"jsonFile" : "target-rt_reflections-Debug-cf6b3548cdfa7edba069.json",
+					"name" : "rt_reflections",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 25,
+					"id" : "rt_reflections_shaders::@2e0e3565467e4e74b279",
+					"jsonFile" : "target-rt_reflections_shaders-Debug-492bd0703bad3b3a34b3.json",
+					"name" : "rt_reflections_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "rt_shadows::@97455ca5daa555f28a91",
+					"jsonFile" : "target-rt_shadows-Debug-8ed6c1712421eacc9c58.json",
+					"name" : "rt_shadows",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "rt_shadows_shaders::@97455ca5daa555f28a91",
+					"jsonFile" : "target-rt_shadows_shaders-Debug-00af752b10e93028ab8d.json",
+					"name" : "rt_shadows_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "rt_triangle::@7995fd49a11c53003fbc",
+					"jsonFile" : "target-rt_triangle-Debug-40ec602b39e6dab5cf57.json",
+					"name" : "rt_triangle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "rt_triangle_shaders::@7995fd49a11c53003fbc",
+					"jsonFile" : "target-rt_triangle_shaders-Debug-02226b3902bb823ed1e1.json",
+					"name" : "rt_triangle_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 26,
+					"id" : "shader_specializations::@33523a2a663667f2f5e1",
+					"jsonFile" : "target-shader_specializations-Debug-e8afe34bbc08a96dfb2b.json",
+					"name" : "shader_specializations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 26,
+					"id" : "shader_specializations_shaders::@33523a2a663667f2f5e1",
+					"jsonFile" : "target-shader_specializations_shaders-Debug-b58ae90318774786214c.json",
+					"name" : "shader_specializations_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 23,
+					"id" : "threaded_rendering::@607543a4e58c1edd83a3",
+					"jsonFile" : "target-threaded_rendering-Debug-88919b5d44741209a4b6.json",
+					"name" : "threaded_rendering",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "update_mappings::@96326d8ef3d4ab9e7c48",
+					"jsonFile" : "target-update_mappings-Debug-ec874a69bc9b89d567ce.json",
+					"name" : "update_mappings",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "variable_shading::@31f586fa6838995b8699",
+					"jsonFile" : "target-variable_shading-Debug-f28eaf2f1df2b80c9272.json",
+					"name" : "variable_shading",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "variable_shading_shaders::@31f586fa6838995b8699",
+					"jsonFile" : "target-variable_shading_shaders-Debug-6fcf33859b1a1b21a9ca.json",
+					"name" : "variable_shading_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "vertex_buffer::@83beeeb3542077d182e5",
+					"jsonFile" : "target-vertex_buffer-Debug-0ec56b9c43b9f689beb5.json",
+					"name" : "vertex_buffer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "vertex_buffer_shaders::@83beeeb3542077d182e5",
+					"jsonFile" : "target-vertex_buffer_shaders-Debug-d5e54f95617d8e8f27d8.json",
+					"name" : "vertex_buffer_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "work_graphs_d3d12::@1f55de780f62a714450f",
+					"jsonFile" : "target-work_graphs_d3d12-Debug-7051b08427227c3cb89c.json",
+					"name" : "work_graphs_d3d12",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "work_graphs_d3d12_shaders::@1f55de780f62a714450f",
+					"jsonFile" : "target-work_graphs_d3d12_shaders-Debug-8081fa7bd7632e5258ff.json",
+					"name" : "work_graphs_d3d12_shaders",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/abertay coursework/donut/Donut-Samples/out/build/x64-Debug",
+		"source" : "D:/abertay coursework/donut/Donut-Samples"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
