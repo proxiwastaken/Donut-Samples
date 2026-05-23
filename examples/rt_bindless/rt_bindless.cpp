@@ -33,6 +33,7 @@
 #include <donut/core/vfs/VFS.h>
 #include <donut/core/math/math.h>
 #include <nvrhi/utils.h>
+#include <unordered_map>
 
 using namespace donut;
 using namespace donut::math;
@@ -57,6 +58,8 @@ private:
     nvrhi::BindingLayoutHandle m_BindlessLayout;
 
     nvrhi::rt::AccelStructHandle m_TopLevelAS;
+    nvrhi::rt::AccelStructHandle m_TopLevelAS_Shadow;
+    std::unordered_map<engine::MeshInfo*, nvrhi::rt::AccelStructHandle> m_ProxyASMap;
 
     nvrhi::BufferHandle m_ConstantBuffer;
 
@@ -71,6 +74,10 @@ private:
 
     bool m_EnableAnimations = true;
     float m_WallclockTime = 0.f;
+    // Ray-specific LOD/instance mask toggle
+    bool m_AggressiveShadowFiltering = true; // if true, small meshes are skipped for shadow rays
+    static const uint32_t INSTANCE_BIT_PRIMARY = 1u;
+    static const uint32_t INSTANCE_BIT_SHADOW = 1u << 1;
 
 public:
     using ApplicationBase::ApplicationBase;
@@ -104,6 +111,7 @@ public:
         globalBindingLayoutDesc.bindings = {
             nvrhi::BindingLayoutItem::VolatileConstantBuffer(0),
             nvrhi::BindingLayoutItem::RayTracingAccelStruct(0),
+            nvrhi::BindingLayoutItem::RayTracingAccelStruct(4),
             nvrhi::BindingLayoutItem::StructuredBuffer_SRV(1),
             nvrhi::BindingLayoutItem::StructuredBuffer_SRV(2),
             nvrhi::BindingLayoutItem::StructuredBuffer_SRV(3),
@@ -181,6 +189,14 @@ public:
         if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
         {
             m_EnableAnimations = !m_EnableAnimations;
+            return true;
+        }
+
+        // Toggle aggressive shadow filtering (skip small meshes for shadow rays)
+        if (key == GLFW_KEY_L && action == GLFW_PRESS)
+        {
+            m_AggressiveShadowFiltering = !m_AggressiveShadowFiltering;
+            log::info("AggressiveShadowFiltering = %d", m_AggressiveShadowFiltering ? 1 : 0);
             return true;
         }
 
@@ -348,6 +364,54 @@ public:
                 nvrhi::utils::BuildBottomLevelAccelStruct(commandList, as, blasDesc);
 
             mesh->accelStruct = as;
+
+            // Create a simplified proxy BLAS for shadow rays: include only geometries above a vertex-count threshold
+            nvrhi::rt::AccelStructDesc proxyDesc;
+            proxyDesc.isTopLevel = false;
+            proxyDesc.debugName = mesh->name + std::string("_proxy");
+            const uint32_t proxyVertexThreshold = 200;
+            for (const auto& geometry : mesh->geometries)
+            {
+                if (geometry->numVertices >= proxyVertexThreshold)
+                {
+                    nvrhi::rt::GeometryDesc geometryDesc;
+                    auto & triangles = geometryDesc.geometryData.triangles;
+                    triangles.indexBuffer = mesh->buffers->indexBuffer;
+                    triangles.indexOffset = (mesh->indexOffset + geometry->indexOffsetInMesh) * sizeof(uint32_t);
+                    triangles.indexFormat = nvrhi::Format::R32_UINT;
+                    triangles.indexCount = geometry->numIndices;
+                    triangles.vertexBuffer = mesh->buffers->vertexBuffer;
+                    triangles.vertexOffset = (mesh->vertexOffset + geometry->vertexOffsetInMesh) * sizeof(float3) + mesh->buffers->getVertexBufferRange(engine::VertexAttribute::Position).byteOffset;
+                    triangles.vertexFormat = nvrhi::Format::RGB32_FLOAT;
+                    triangles.vertexStride = sizeof(float3);
+                    triangles.vertexCount = geometry->numVertices;
+                    geometryDesc.geometryType = nvrhi::rt::GeometryType::Triangles;
+                    geometryDesc.flags = (geometry->material->domain == engine::MaterialDomain::AlphaTested)
+                        ? nvrhi::rt::GeometryFlags::None
+                        : nvrhi::rt::GeometryFlags::Opaque;
+                    proxyDesc.bottomLevelGeometries.push_back(geometryDesc);
+                }
+            }
+
+            nvrhi::rt::AccelStructHandle proxyAS = nullptr;
+            if (!proxyDesc.bottomLevelGeometries.empty())
+            {
+                if (mesh->skinPrototype != nullptr)
+                {
+                    proxyDesc.buildFlags = nvrhi::rt::AccelStructBuildFlags::PreferFastTrace;
+                }
+                else
+                {
+                    proxyDesc.buildFlags = nvrhi::rt::AccelStructBuildFlags::PreferFastTrace | nvrhi::rt::AccelStructBuildFlags::AllowCompaction;
+                }
+
+                proxyAS = GetDevice()->createAccelStruct(proxyDesc);
+                nvrhi::utils::BuildBottomLevelAccelStruct(commandList, proxyAS, proxyDesc);
+            }
+
+            mesh->accelStruct = as;
+            if (proxyAS)
+                m_ProxyASMap[mesh.get()] = proxyAS;
         }
 
 
@@ -355,9 +419,13 @@ public:
         tlasDesc.isTopLevel = true;
         tlasDesc.topLevelMaxInstances = m_Scene->GetSceneGraph()->GetMeshInstances().size();
         m_TopLevelAS = GetDevice()->createAccelStruct(tlasDesc);
+        // Create a shadow TLAS for proxy BLAS population
+        nvrhi::rt::AccelStructDesc tlasShadowDesc = tlasDesc;
+        m_TopLevelAS_Shadow = GetDevice()->createAccelStruct(tlasShadowDesc);
+        log::info("Proxy BLAS map size: %zu", m_ProxyASMap.size());
     }
 
-    void BuildTLAS(nvrhi::ICommandList* commandList, uint32_t frameIndex) const
+    void BuildTLAS(nvrhi::ICommandList* commandList, uint32_t frameIndex)
     {
         commandList->beginMarker("Skinned BLAS Updates");
 
@@ -392,7 +460,13 @@ public:
             nvrhi::rt::InstanceDesc instanceDesc;
             instanceDesc.bottomLevelAS = instance->GetMesh()->accelStruct;
             assert(instanceDesc.bottomLevelAS);
-            instanceDesc.instanceMask = 1;
+            // Default instance mask: assign primary bit and optionally shadow bit depending on geometry size.
+            auto mesh = instance->GetMesh();
+            uint32_t mask = INSTANCE_BIT_PRIMARY;
+            // Heuristic: skip small meshes for shadow rays to save traversal. Threshold is 200 vertices.
+            if (mesh->totalVertices >= 200)
+                mask |= INSTANCE_BIT_SHADOW;
+            instanceDesc.instanceMask = mask;
             instanceDesc.instanceID = instance->GetInstanceIndex();
 
             auto node = instance->GetNode();
@@ -408,6 +482,34 @@ public:
         commandList->beginMarker("TLAS Update");
         commandList->buildTopLevelAccelStruct(m_TopLevelAS, instances.data(), instances.size());
         commandList->endMarker();
+
+        // Build shadow TLAS using proxy BLAS where available
+        std::vector<nvrhi::rt::InstanceDesc> instancesShadow;
+        for (const auto& instance : m_Scene->GetSceneGraph()->GetMeshInstances())
+        {
+            nvrhi::rt::InstanceDesc instanceDesc;
+            auto mesh = instance->GetMesh();
+            // For skinned meshes, use the per-frame-updated BLAS instead of a static proxy
+            if (mesh->skinPrototype != nullptr)
+            {
+                instanceDesc.bottomLevelAS = mesh->accelStruct;
+            }
+            else
+            {
+                auto it = m_ProxyASMap.find(mesh.get());
+                instanceDesc.bottomLevelAS = (it != m_ProxyASMap.end()) ? it->second : mesh->accelStruct;
+            }
+            instanceDesc.instanceMask = INSTANCE_BIT_SHADOW;
+            instanceDesc.instanceID = instance->GetInstanceIndex();
+            auto node = instance->GetNode();
+            dm::affineToColumnMajor(node->GetLocalToWorldTransformFloat(), instanceDesc.transform);
+            instancesShadow.push_back(instanceDesc);
+        }
+
+        commandList->beginMarker("Shadow TLAS Update");
+        commandList->buildTopLevelAccelStruct(m_TopLevelAS_Shadow, instancesShadow.data(), instancesShadow.size());
+        commandList->endMarker();
+        log::info("TLAS instances: %zu, Shadow TLAS instances: %zu, Proxy BLAS count: %zu", instances.size(), instancesShadow.size(), m_ProxyASMap.size());
     }
 
 
@@ -437,6 +539,7 @@ public:
             bindingSetDesc.bindings = {
                 nvrhi::BindingSetItem::ConstantBuffer(0, m_ConstantBuffer),
                 nvrhi::BindingSetItem::RayTracingAccelStruct(0, m_TopLevelAS),
+                nvrhi::BindingSetItem::RayTracingAccelStruct(4, m_TopLevelAS_Shadow),
                 nvrhi::BindingSetItem::StructuredBuffer_SRV(1, m_Scene->GetInstanceBuffer()),
                 nvrhi::BindingSetItem::StructuredBuffer_SRV(2, m_Scene->GetGeometryBuffer()),
                 nvrhi::BindingSetItem::StructuredBuffer_SRV(3, m_Scene->GetMaterialBuffer()),
@@ -461,6 +564,11 @@ public:
         constants.ambientColor = float4(0.05f);
         m_View.FillPlanarViewConstants(constants.view);
         m_SunLight->FillLightConstants(constants.light);
+        // Configure ray instance masks: primary rays consider all instance bits, shadow rays may be filtered
+        constants.primaryRayMask = INSTANCE_BIT_PRIMARY | INSTANCE_BIT_SHADOW;
+        constants.shadowRayMask = m_AggressiveShadowFiltering ? INSTANCE_BIT_SHADOW : (INSTANCE_BIT_PRIMARY | INSTANCE_BIT_SHADOW);
+        constants.useShadowProxy = m_AggressiveShadowFiltering ? 1u : 0u;
+
         m_CommandList->writeBuffer(m_ConstantBuffer, &constants, sizeof(constants));
 
         if (m_RayPipeline)
@@ -501,6 +609,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 int main(int __argc, const char** __argv)
 #endif
 {
+    // Enable console-mode logging so log::info / log::warning print to stdout/stderr
+    // and OutputDebugString is enabled. This makes it easy to see logs when running the
+    // executable directly or under DebugView / Visual Studio.
+    donut::log::ConsoleApplicationMode();
+
     nvrhi::GraphicsAPI api = app::GetGraphicsAPIFromCommandLine(__argc, __argv);
     app::DeviceManager* deviceManager = app::DeviceManager::Create(api);
 

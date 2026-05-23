@@ -32,6 +32,10 @@ struct LightingConstants
 
     LightConstants light;
     PlanarViewConstants view;
+    // Ray instance masks: allow shader to select which instance bits a ray should consider.
+    uint primaryRayMask;
+    uint shadowRayMask;
+    uint useShadowProxy;
 };
 
 #endif // LIGHTING_CB_H

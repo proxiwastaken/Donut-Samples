@@ -45,6 +45,7 @@ ConstantBuffer<LightingConstants> g_Const : register(b0);
 RWTexture2D<float4> u_Output : register(u0);
 
 RaytracingAccelerationStructure SceneBVH : register(t0);
+RaytracingAccelerationStructure SceneBVHShadow : register(t4);
 StructuredBuffer<InstanceData> t_InstanceData : register(t1);
 StructuredBuffer<GeometryData> t_GeometryData : register(t2);
 StructuredBuffer<MaterialConstants> t_MaterialConstants : register(t3);
@@ -267,14 +268,13 @@ bool considerTransparentMaterial(uint instanceIndex, uint triangleIndex, uint ge
     return alphaMask;
 }
 
-void traceRay(RayDesc ray, inout RayPayload payload)
+void traceRay(RayDesc ray, inout RayPayload payload, uint rayMask)
 {
     payload.instanceID = ~0u;
 
 #if USE_RAY_QUERY
-
     RayQuery<RAY_FLAG_NONE> rayQuery;
-    rayQuery.TraceRayInline(SceneBVH, RAY_FLAG_NONE, 0xff, ray);
+    rayQuery.TraceRayInline(SceneBVH, RAY_FLAG_NONE, rayMask, ray);
 
     while (rayQuery.Proceed())
     {
@@ -302,7 +302,46 @@ void traceRay(RayDesc ray, inout RayPayload payload)
 
 #else // !USE_RAY_QUERY
 
-    TraceRay(SceneBVH, RAY_FLAG_NONE, 0xff, 0, 0, 0, ray, payload);
+    TraceRay(SceneBVH, RAY_FLAG_NONE, rayMask, 0, 0, 0, ray, payload);
+
+#endif
+}
+
+void traceShadowRay(RayDesc ray, inout RayPayload payload, uint rayMask)
+{
+    payload.instanceID = ~0u;
+
+#if USE_RAY_QUERY
+    RayQuery<RAY_FLAG_NONE> rayQuery;
+    rayQuery.TraceRayInline(SceneBVHShadow, RAY_FLAG_NONE, rayMask, ray);
+
+    while (rayQuery.Proceed())
+    {
+        if (rayQuery.CandidateType() == CANDIDATE_NON_OPAQUE_TRIANGLE)
+        {
+            if (considerTransparentMaterial(
+                rayQuery.CandidateInstanceID(),
+                rayQuery.CandidatePrimitiveIndex(),
+                rayQuery.CandidateGeometryIndex(),
+                rayQuery.CandidateTriangleBarycentrics()))
+            {
+                rayQuery.CommitNonOpaqueTriangleHit();
+            }
+        }
+    }
+
+    if (rayQuery.CommittedStatus() == COMMITTED_TRIANGLE_HIT)
+    {
+        payload.instanceID = rayQuery.CommittedInstanceID();
+        payload.primitiveIndex = rayQuery.CommittedPrimitiveIndex();
+        payload.geometryIndex = rayQuery.CommittedGeometryIndex();
+        payload.barycentrics = rayQuery.CommittedTriangleBarycentrics();
+        payload.committedRayT = rayQuery.CommittedRayT();
+    }
+
+#else // !USE_RAY_QUERY
+
+    TraceRay(SceneBVHShadow, RAY_FLAG_NONE, rayMask, 0, 0, 0, ray, payload);
 
 #endif
 }
@@ -342,7 +381,10 @@ float3 shadeSurface(
     RayDesc shadowRay = setupShadowRay(worldPos, viewDirection);
 
     payload.instanceID = ~0u;
-    traceRay(shadowRay, payload);
+    if (g_Const.useShadowProxy != 0)
+        traceShadowRay(shadowRay, payload, g_Const.shadowRayMask);
+    else
+        traceRay(shadowRay, payload, g_Const.shadowRayMask);
     if (payload.instanceID == ~0u)
     {
         ShadeSurface(g_Const.light, ms, worldPos, viewDirection, diffuseTerm, specularTerm);
@@ -396,7 +438,7 @@ void RayGen()
     RayDesc ray = setupPrimaryRay(pixelPosition, g_Const.view);
 
     RayPayload payload = (RayPayload)0;
-    traceRay(ray, payload);
+    traceRay(ray, payload, g_Const.primaryRayMask);
 
     if (payload.instanceID == ~0u)
     {
